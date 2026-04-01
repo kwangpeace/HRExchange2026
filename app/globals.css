@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0f1419;
+  --surface: #1a222d;
+  --surface-hover: #232d3a;
+  --border: #2d3a47;
+  --text: #e8edf2;
+  --muted: #8b9aab;
+  --accent: #3db8a1;
+  --accent-dim: #2a8f7d;
+}
+
+body {
+  color: var(--text);
+  background: radial-gradient(ellipse 120% 80% at 50% -20%, #1a3040 0%, var(--bg) 55%);
+  min-height: 100vh;
+}
