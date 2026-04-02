@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={noto.variable}>
-      <body className={`${noto.className} antialiased`}>
+    <html lang="ko" className={`${noto.variable} bg-[var(--bg)]`}>
+      <body className={`${noto.className} text-[var(--text)] antialiased`}>
         {children}
         <ChatWidget />
       </body>

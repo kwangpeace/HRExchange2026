@@ -3,18 +3,43 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0f1419;
-  --surface: #1a222d;
-  --surface-hover: #232d3a;
-  --border: #2d3a47;
-  --text: #e8edf2;
-  --muted: #8b9aab;
-  --accent: #3db8a1;
-  --accent-dim: #2a8f7d;
+  color-scheme: light;
+  /* 웜 페이퍼 톤 — 검정에 가까운 회색 대신 스톤 계열 */
+  --bg: #f6f4f0;
+  --bg-accent: #eef8f6;
+  --surface: #ffffff;
+  --surface-muted: #f3f1ec;
+  --tag-bg: #ebe8e2;
+  --border: #e2ddd4;
+  --border-focus: #99f6e4;
+  --text: #1c1917;
+  --muted: #57534e;
+  --accent: #0d9488;
+  --accent-dim: #0f766e;
+  --accent-soft: #ccfbf1;
+  --accent-ring: rgba(13, 148, 136, 0.35);
+  --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.05);
+  --shadow-md: 0 8px 24px rgba(28, 25, 23, 0.07);
+  --shadow-card: 0 2px 8px rgba(28, 25, 23, 0.04), 0 12px 32px rgba(28, 25, 23, 0.06);
+}
+
+html {
+  color-scheme: light;
 }
 
 body {
   color: var(--text);
-  background: radial-gradient(ellipse 120% 80% at 50% -20%, #1a3040 0%, var(--bg) 55%);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, var(--bg-accent) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(204, 251, 241, 0.45) 0%, transparent 45%),
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(231, 229, 228, 0.5) 0%, transparent 50%),
+    linear-gradient(180deg, #faf9f7 0%, var(--bg) 35%, #f3f1ec 100%);
+  background-attachment: fixed;
   min-height: 100vh;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--text);
 }
